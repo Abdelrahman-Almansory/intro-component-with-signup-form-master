@@ -127,10 +127,6 @@ form button {
   margin-bottom: 1.5rem;
 }
 
-.email:invalid {
-  color: #ff7a7a;
-}
-
 form input {
   border-radius: 0.5rem;
   border: 2px solid var(--grayish-blue);
@@ -143,6 +139,7 @@ form input {
   background-repeat: no-repeat;
   background-size: 2rem;
   background-position-x: calc(100% - 2rem);
+  color: #ff7a7a;
 }
 
 form input:focus-within {

@@ -30,6 +30,8 @@ document.querySelector(".submit").addEventListener("click", function (e) {
   } else {
     firstMessage.classList.add("hidden");
     firstInput.style.borderColor = " #38cc8c";
+    firstInput.classList.remove("invalid");
+    firstInput.style.backgroundImage = "";
   }
 
   if (!lastName) {
@@ -42,6 +44,7 @@ document.querySelector(".submit").addEventListener("click", function (e) {
   } else {
     lastInput.style.border = "2px solid #38cc8c";
     secondMessage.classList.add("hidden");
+    lastInput.classList.remove("invalid");
   }
 
   let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -59,7 +62,8 @@ document.querySelector(".submit").addEventListener("click", function (e) {
     ? ((emailMessage.innerHTML = "Invalid Email Format"),
       (emailInput.style.border = "2px solid #ff7a7a"))
     : ((emailMessage.innerHTML = ""),
-      (emailInput.style.border = "2px solid #28a745"));
+      (emailInput.style.border = "2px solid #28a745"),
+      emailInput.classList.remove("invalid"));
 
   if (!password) {
     passMessage.classList.remove("hidden");
@@ -71,6 +75,7 @@ document.querySelector(".submit").addEventListener("click", function (e) {
   } else {
     passInput.style.border = "2px solid #38cc8c";
     passMessage.classList.add("hidden");
+    passInput.classList.remove("invalid");
   }
   if (isvalid) {
     form.submit;
