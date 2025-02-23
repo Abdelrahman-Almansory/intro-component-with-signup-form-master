@@ -24,6 +24,7 @@ document.querySelector(".submit").addEventListener("click", function (e) {
     firstMessage.classList.remove("hidden");
     firstMessage.innerHTML = "First Name cannot be empty";
     firstInput.style.border = "2px solid #ff7a7a";
+    firstInput.classList.add("invalid");
     firstInput.placeholder = "";
     isvalid = false;
   } else {
@@ -35,6 +36,7 @@ document.querySelector(".submit").addEventListener("click", function (e) {
     secondMessage.classList.remove("hidden");
     secondMessage.innerHTML = "Last Name cannot be empty";
     lastInput.style.border = "2px solid #ff7a7a";
+    lastInput.classList.add("invalid");
     lastInput.placeholder = "";
     isvalid = false;
   } else {
@@ -51,7 +53,8 @@ document.querySelector(".submit").addEventListener("click", function (e) {
       (emailInput.style.border = "2px solid #ff7a7a"),
       emailMessage.classList.remove("hidden"),
       (emailInput.placeholder = ""),
-      (isvalid = false))
+      (isvalid = false),
+      emailInput.classList.add("invalid"))
     : !pattern.test(email)
     ? ((emailMessage.innerHTML = "Invalid Email Format"),
       (emailInput.style.border = "2px solid #ff7a7a"))
@@ -63,6 +66,7 @@ document.querySelector(".submit").addEventListener("click", function (e) {
     passMessage.innerHTML = "Password Input cannot be empty";
     passInput.style.border = "2px solid #ff7a7a";
     passInput.placeholder = "";
+    passInput.classList.add("invalid");
     isvalid = false;
   } else {
     passInput.style.border = "2px solid #38cc8c";
