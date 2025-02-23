@@ -1,0 +1,204 @@
+:root {
+  /* Colors */
+  --red: #ff7a7a;
+  --green: #38cc8c;
+  --blue-accent: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  /* Font weights */
+  --fw-sm: 400;
+  --fw-med: 500;
+  --fw-lg: 600;
+  --fw-xl: 700;
+}
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Styling Mobile first */
+
+body {
+  min-height: 100dvh;
+  background-color: var(--red);
+  background-image: url("images/bg-intro-mobile.png");
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "Poppins", serif;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+header h1 {
+  color: #fff;
+  font-weight: var(--fw-xl);
+  line-height: 1.4;
+}
+
+header p {
+  color: white;
+  font-weight: var(--fw-sm);
+}
+
+.form-container {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.bottom-container,
+form {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.5rem; */
+}
+
+.bottom-container > p {
+  background-color: var(--blue-accent);
+  padding: 1.3rem 7rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+form input,
+form button {
+  padding: 1rem;
+  font-weight: var(--fw-lg);
+  margin-bottom: 1.5rem;
+}
+
+.email:user-invalid {
+  color: #ff7a7a;
+}
+
+form input {
+  border-radius: 0.5rem;
+  border: 2px solid var(--grayish-blue);
+  display: flex;
+}
+
+input:invalid {
+  background-image: url("images/icon-error.svg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  background-position-x: calc(100% - 2rem);
+}
+
+form input:focus-within {
+  outline: none;
+}
+
+form button {
+  background-color: var(--green);
+  color: white;
+  font-weight: var(--fw-xl);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.5rem;
+  border-bottom: 4px solid rgb(11, 160, 11);
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+form button:hover {
+  background-color: rgb(110, 218, 163);
+}
+
+.form-container p {
+  font-size: 0.75rem;
+  color: var(--grayish-blue);
+}
+
+.form-container p .terms {
+  color: var(--red);
+  font-weight: var(--fw-lg);
+}
+
+.hidden {
+  display: none;
+}
+
+.message {
+  color: var(--red);
+  font-style: italic;
+  font-size: 0.8rem;
+  font-weight: var(--fw-lg);
+  align-self: flex-end;
+  position: relative;
+  top: -1rem;
+}
+
+@media (min-width: 1050px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 5rem;
+  }
+
+  header {
+    text-align: left;
+  }
+
+  header h1 {
+    font-size: 3.5rem;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </header>
+      <div class="bottom-container">
+        <p>
+          <strong class="bold">Try it free 7 days</strong> then $20/mo.
+          thereafter
+        </p>
+        <div class="form-container">
+          <form action="/">
+            <input
+              type="text"
+              placeholder="First Name"
+              class="firstName"
+              required
+            />
+            <div class="message firstMessage hidden"></div>
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="lastName"
+              required
+            />
+            <div class="message secondMessage hidden"></div>
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="email"
+              required
+            />
+            <div class="message emailMessage hidden"></div>
+            <input
+              type="password"
+              placeholder="Password"
+              class="password"
+              required
+            />
+            <div class="message passMessage hidden"></div>
+            <button class="submit">Claim your free trial</button>
+            <p>
+              By clicking the button, you are agreeing to our
+              <span class="terms">Terms and Services</span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
