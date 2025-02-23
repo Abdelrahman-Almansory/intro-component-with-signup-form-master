@@ -102,6 +102,8 @@ header p {
   padding: 2rem;
   background-color: white;
   border-radius: 0.5rem;
+  box-shadow: 0px 10px 10px rgba(93, 11, 11, 0.5);
+  margin-top: 1.5rem;
 }
 
 .bottom-container,
@@ -115,10 +117,7 @@ form {
   padding: 1.3rem 7rem;
   border-radius: 0.5rem;
   color: white;
-}
-
-.form-container {
-  margin-top: 1rem;
+  box-shadow: 0px 10px 10px rgba(93, 11, 11, 0.5);
 }
 
 form input,
