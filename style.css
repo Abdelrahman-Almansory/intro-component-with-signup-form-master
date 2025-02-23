@@ -135,7 +135,7 @@ form input {
   display: flex;
 }
 
-input:invalid {
+input:user-invalid {
   background-image: url("images/icon-error.svg");
   background-position: right center;
   background-repeat: no-repeat;
